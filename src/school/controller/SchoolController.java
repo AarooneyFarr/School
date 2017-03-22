@@ -13,11 +13,19 @@ public class SchoolController
 		school = new SchoolBot();
 		scanner = new Scanner(System.in);
 		
+		
 	}
 	
 	void start()
 	{
-		getMajorAndClass();
+		String exitCode = "";
+		while(!exitCode.equalsIgnoreCase("quit"))
+			{
+				getMajorAndClass();
+				System.out.println("If you would like to quit, type quit. Otherwise type anything and hit enter");
+				exitCode = scanner.next();
+			}
+		
 		
 	}
 	
